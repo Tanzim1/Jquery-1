@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--font-awesome-->
+    <link rel="stylesheet" href="css/fontawesome-all.css">
+
+    <!-- Bootstrap CSS -->
+    
+    
+    <link rel="stylesheet" href="css/style.css">
+    <!--Google Font-->
+     
+
+    <title>jQuery basics</title>
+  </head>
+  <body>
+  <h1>Click Me!!!</h1>
+  <h2>Glory Glory Manchester United</h2>
+  <h3>Manchester is Red</h3>
+  <h4>Old Trafford</h4>
+  <h5>Sir Alex</h5>
+  <h6>Stretford end</h6>
+  <p>Bangladesh</p>
+  <p>India</p>
+  <p>Pakistan</p>
+  <p>Nepal</p>
+  <p>Bhutan</p>
+  
+  
+  <button id="btn-show">Show</button>
+  <button id="btn-hide">Hide</button>
+  <button id="btn-slideup">Slideup</button>
+  <button id="btn-slidedown">Slidedown</button>
+  <button id="btn-slidetoggle">Slidetoggle</button>
+  <button id="btn-stop">Button Stop</button>
+  <button id="add-class">Change Border color</button>
+  <button id="remove-class">Remove Border color</button>
+  <button id="remove-header">Remove Header</button>
+  <button id="style-bd">Bangladesh finder</button>
+  <button id="toggle-btn">Toggle function</button>
+  
+  <br>
+  <br>
+  <div class="area"> 
+  
+  </div>
+  <form action="">
+      <input type="text"name="username"><br><br>
+      <input type="password"name="psw"><br>
+  </form>
+  
+  
+<script src="js/jquery-3.3.1.min.js"></script>
+   <script>
+     $(document).ready(function(){
+         $(":header:first").css({
+             color:'red'
+             
+         });
+         
+      $("h1").click(function(){alert("Hello Bangladesh");
+                                  }) 
+    $("#btn-show").click(function(){
+        $(".area").fadeIn(3000);
+        
+    });  
+     $("#btn-hide").click(function(){
+        $(".area").fadeOut(5000);
+        
+    });
+     $("#add-class").click(function(){
+        $(".area").addClass("border-css");
+        
+    });
+         $("#remove-class").click(function(){
+        $(".area").removeClass("border-css"); 
+        
+    });
+         $("#remove-header").click(function(){
+        $(":header:not(:header:eq(3))").fadeOut(5000);
+        
+    });  $("#style-bd").click(function(){
+         $("p:contains('Bangladesh')").css({color:'red',
+                                            fontWeight:'bold'
+             });
+             }); 
+         
+         $("input[name=username]").focusin(function(){
+             $(this).css({
+                 backgroundColor:'red',
+                          color:'white'
+             
+             
+             });
+             });
+         $("input[name=username]").focusout(function(){
+             $(this).css({
+                 backgroundColor:'green',
+                          color:'yellow'
+             
+             
+             });
+             }); 
+         $("#toggle-btn").click(function(){
+            $(".area").fadeToggle(4000);
+            
+           });
+         $("#btn-slideup").click(function(){
+              $(".area").slideUp(4000);
+            
+             
+         });
+         $("#btn-slidedown").click(function(){
+             $(".area").slideDown(4000);
+             
+         });
+         $("#btn-slidetoggle").click(function(){
+             $(".area").slideToggle(4000);
+             
+         });
+         $("#btn-stop").click(function(){
+             $(".area").stop();
+             
+         });
+         })
+    
+   
+      
+      
+  
+      
+  </script>
+    
+
+
+
+    
+   
+      
+    
+    
+  </body>
+</html>
